@@ -1,12 +1,7 @@
-<<<<<<< HEAD
 const fs = require('fs');
 
 const profileDataArgs = process.argv.slice(2);
 
-=======
-
-const profileDataArgs = process.argv.slice(2, process.argv.length);
->>>>>>> edb5592ce0786332a2ec3510a5f483291d1fac20
 const [name, github] = profileDataArgs;
 
 const generatePage = (name, github) => {
@@ -31,11 +26,5 @@ const generatePage = (name, github) => {
 fs.writeFile('./index.html', generatePage(name, github), err => {
   if (err) throw new Error(err);
 
-<<<<<<< HEAD
   console.log('Portfolio complete! Check out index.html to see the output!');
 });
-=======
-    console.log('Portfolio complete! Check out index.html to see the output!')
-})
-
->>>>>>> edb5592ce0786332a2ec3510a5f483291d1fac20
